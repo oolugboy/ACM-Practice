@@ -1,0 +1,28 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int f = 0;
+    cin >> f;
+    while(f--)
+    {
+        int n = 0, m = 0,w = 0;
+        cin >> n >> m >> w;
+        int map[n + 1][n + 1];
+        for(int i = 0; i < n + 1; i++)
+        {
+            for(int j = 0; j < n + 1; j++)
+                map[i][j] = 10000;
+        }
+        for(int i = 0; i < m; i++)
+        {
+            int s = 0, d = 0, t = 0;
+        }
+    }
+    return 0;
+}

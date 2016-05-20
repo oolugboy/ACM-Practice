@@ -1,0 +1,41 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class HardWoodSpecies  {
+
+    public static void main(String[] args) 
+    {
+        double total = 0;
+        HashMap<String, double> trees = new HashMap<String, double>();
+        Scanner getStuff = new Scanner(System.in);
+        while(getStuff.hasNext())
+        {
+            String val = getStuff.nextLine();
+            //cerr << " The val " << val << " " << size << endl;
+            //cerr <<  " at eof " << (size == EOF) << endl;
+            total++;
+            if(trees.containsKey(val) == false)
+            {
+                trees.put(val,1);
+            }
+            else
+            {
+                trees.put(val, trees.get(val) + 1);
+            } 
+        }
+        Iterator<HashMap.Entry<String, int>> it =
+        trees.entrySet().iterator();
+        while(it.hasNext())
+        {
+            HashMap.Entry<String, double> curr = it.next();
+            double pcent = ((curr.getValue()/(double)total) * (double)100);
+            String.format("percent = %.4f", pcent);
+            System.out.println(curr.getKey() + " " + percent);
+
+        } 
+    }
+}
+
